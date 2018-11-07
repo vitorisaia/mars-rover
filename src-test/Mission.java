@@ -13,8 +13,8 @@ class Mission {
 		// make it right
 		// make it fast
 
-		// avoid rovers to crash?
-		// watch for plateu boundaries?
+		// avoid rovers to crash? TODO
+		// watch for plateu boundaries? DONE
 
 		Plateau plateau = new Plateau(5, 5);
 
