@@ -78,15 +78,21 @@ public class Rover {
 
 	private boolean newPositionIsValid(final int _x, final int _y) {
 		// check if it's not leaving the plateau
-		if (_x > this.plateau.getX() || _x < 0)
-			return false;
-		if (_y > this.plateau.getY() || _y < 0)
+		if (this.invalidX(_x) || this.invalidY(_y))
 			return false;
 
 		if (this.plateau.hasRover(_x, _y))
 			return false;
 
 		return true;
+	}
+
+	private boolean invalidY(final int _y) {
+		return _y > this.plateau.getY() || _y < 0;
+	}
+
+	private boolean invalidX(final int _x) {
+		return _x > this.plateau.getX() || _x < 0;
 	}
 
 	/**
